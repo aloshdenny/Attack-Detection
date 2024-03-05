@@ -1,0 +1,141 @@
+Features extracted from Chi-Squared Test (p-value below 0.05):
+Feature-set size: 70
+Architecture: CNN-BiLSTM model with 3 output classes [0,1,2] which are [DDoS_NetBIOS, Benign, DDoS_LDAP] respectively.
+['Unnamed: 0', ' Source Port', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', ' SYN Flag Count', ' RST Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length.1', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min', ' Inbound']
+All models were trained for 10 epochs to let the metrics saturate
+************************************************************************************************************
+
+Features extracted from Heatmap with Covariance >= 0.05 or Covariance <= -0.05
+Feature-set size: 20
+Dataset: 20
+Common features: 20 {' Fwd Header Length.1', ' Max Packet Length', ' Fwd Packet Length Min', ' Fwd Packet Length Max', ' Packet Length Mean', ' Flow Packets/s', ' Average Packet Size', 'Fwd Packets/s', ' Subflow Fwd Bytes', 'Total Length of Fwd Packets', ' Protocol', ' Fwd Header Length', ' Avg Fwd Segment Size', ' URG Flag Count', ' Fwd Packet Length Mean', ' Inbound', 'Flow Bytes/s', ' Min Packet Length', ' min_seg_size_forward', 'Unnamed: 0'}
+
+SPLIT: 90/10
+Accuracy: 0.9997280404831167
+Class 0: Precision=0.9983800167224081, Recall=0.9991632236807698, F1=0.9987714666596963
+Class 1: Precision=0.9595141700404858, Recall=0.9895615866388309, F1=0.9743062692702981
+Class 2: Precision=0.999973159118116, Recall=0.9998121440801232, F1=0.9998926451169632
+Macro-average Precision=0.9859557819603366, Recall=0.996178984799908, F1=0.9909901270156526, MCC=0.9984265847437125
+
+SPLIT: 80/20
+Accuracy: 0.9996794755053724
+Class 0: Precision=0.9981180898612091, Recall=0.9993719086127032, F1=0.9987446057277364
+Class 1: Precision=0.9728643216080402, Recall=0.9718875502008032, F1=0.9723756906077347
+Class 2: Precision=0.9999114262784812, Recall=0.9997853029107557, F1=0.9998483606172395
+Macro-average Precision=0.99029794591591, Recall=0.9903482539080875, F1=0.9903228856509035, MCC=0.998145548537734
+
+SPLIT: 70/30
+Accuracy: 0.9997426089096169
+Class 0: Precision=0.9982283054262489, Recall=0.999495643402494, F1=0.9988615724205056
+Class 1: Precision=0.9773785761809713, Recall=0.9885598923283984, F1=0.9829374372699899
+Class 2: Precision=0.9999588302050256, Recall=0.9997977635874234, F1=0.9998782904098213
+Macro-average Precision=0.9918552372707485, Recall=0.995951099772772, F1=0.9938924333667724, MCC=0.9985151523424781
+------------------------------------------------------------------------------------------------------------
+
+Features extracted from Heatmap with Covariance >= 0.04 or Covariance <= -0.04
+Feature-set size: 22
+Dataset: 22
+Common features: 22 {' Fwd Header Length.1', ' Max Packet Length', ' Fwd Packet Length Min', ' Fwd Packet Length Max', ' Packet Length Mean', ' Flow Packets/s', ' Average Packet Size', 'Fwd Packets/s', ' Subflow Fwd Bytes', 'Total Length of Fwd Packets', ' Protocol', ' Fwd Header Length', ' Avg Fwd Segment Size', ' URG Flag Count', ' Fwd Packet Length Mean', ' Label', ' Inbound', ' Source Port', 'Flow Bytes/s', ' Min Packet Length', ' min_seg_size_forward', ' Down/Up Ratio', 'Unnamed: 0'}
+
+SPLIT: 90/10
+Accuracy: 0.9996357384310526
+Class 0: Precision=0.9981724191948201, Recall=0.9994771515214891, F1=0.9988243592758053
+Class 1: Precision=0.927063339731286, Recall=0.9917864476386037, F1=0.9583333333333334
+Class 2: Precision=0.9999892602457255, Recall=0.999672541241015, F1=0.999830875661397
+Macro-average Precision=0.9750750063906106, Recall=0.9969787134670359, F1=0.9856628560901785, MCC=0.9978964646485641
+
+SPLIT: 80/20
+Accuracy: 0.9993564696654371
+Class 0: Precision=0.9949722562325788, Recall=0.9995027870096564, F1=0.9972323759791124
+Class 1: Precision=0.9333333333333333, Recall=0.9959919839679359, F1=0.9636451769268056
+Class 2: Precision=0.9999973142754318, Recall=0.9993504750657577, F1=0.9996737900362321
+Macro-average Precision=0.9761009679471147, Recall=0.9982817486811166, F1=0.9868504476473833, MCC=0.9962910292266877
+
+SPLIT: 70/30
+Accuracy: 0.9996438319793552
+Class 0: Precision=0.9980895480912849, Recall=0.9994608601888728, F1=0.9987747334393493
+Class 1: Precision=0.940279542566709, Recall=0.9886439545758183, F1=0.963855421686747
+Class 2: Precision=0.9999713535791912, Recall=0.9996921369632533, F1=0.9998317257774627
+Macro-average Precision=0.9794468147457284, Recall=0.9959323172426481, F1=0.9874872936345197, MCC=0.9979475606014531
+------------------------------------------------------------------------------------------------------------
+
+Features extracted from Heatmap with Covariance >= 0.03 or Covariance <= -0.03
+Feature-set size: 24
+Dataset: 24
+Common features: 24 {' Fwd Header Length.1', ' Max Packet Length', ' Fwd Packet Length Min', ' Fwd Packet Length Max', ' Packet Length Mean', ' Flow Packets/s', ' Average Packet Size', 'Fwd Packets/s', ' Subflow Fwd Bytes', 'Init_Win_bytes_forward', 'Total Length of Fwd Packets', ' Protocol', ' Fwd Header Length', ' Avg Fwd Segment Size', ' URG Flag Count', ' Fwd Packet Length Mean', ' Label', ' Inbound', ' Source Port', 'Flow Bytes/s', ' Min Packet Length', ' min_seg_size_forward', ' Down/Up Ratio', ' CWE Flag Count', 'Unnamed: 0'}
+
+SPLIT: 90/10
+Accuracy: 0.9995823134009403
+Class 0: Precision=0.9981720373948921, Recall=0.9992680121300846, F1=0.9987197240874769
+Class 1: Precision=0.9329388560157791, Recall=0.971252566735113, F1=0.9517102615694165
+Class 2: Precision=0.9999087209115023, Recall=0.9996886457701454, F1=0.9997986712301187
+Macro-average Precision=0.9770065381073912, Recall=0.9900697415451143, F1=0.9834095522956706, MCC=0.9975859447790448
+
+SPLIT: 80/20
+Accuracy: 0.9996381659628306
+Class 0: Precision=0.9979098628347486, Recall=0.9995289561144113, F1=0.9987187532684865
+Class 1: Precision=0.9350893697083725, Recall=0.9959919839679359, F1=0.9645803008248423
+Class 2: Precision=1.0, Recall=0.9996591336088894, F1=0.999829537752019
+Macro-average Precision=0.9776664108477071, Recall=0.9983933578970788, F1=0.9877095306151159, MCC=0.9979103160619553
+
+SPLIT: 70/30
+Accuracy: 0.9996519267070971
+Class 0: Precision=0.9980375471075529, Recall=0.9994608601888728, F1=0.9987486965589155
+Class 1: Precision=0.9371464487743557, Recall=0.9959919839679359, F1=0.9656735751295337
+Class 2: Precision=0.9999964190691728, Recall=0.9996813975549947, F1=0.9998388834984479
+Macro-average Precision=0.9783934716503605, Recall=0.9983780805706012, F1=0.9880870517289657, MCC=0.9979948588413118
+------------------------------------------------------------------------------------------------------------
+
+Features extracted from Heatmap with Covariance >= 0.02 or Covariance <= -0.02
+Feature-set size: 37
+Dataset: 37
+Common features: 37 {' Fwd Header Length.1', ' Max Packet Length', ' Fwd Packet Length Min', ' Fwd Packet Length Max', ' Packet Length Mean', ' Flow Packets/s', ' Bwd Packet Length Std', ' Average Packet Size', 'Fwd Packets/s', ' Subflow Fwd Bytes', 'Init_Win_bytes_forward', ' Bwd IAT Min', 'Total Length of Fwd Packets', ' Packet Length Std', ' Packet Length Variance', 'Fwd PSH Flags', ' Protocol', ' Fwd Header Length', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' URG Flag Count', ' Fwd Packet Length Std', ' Fwd Packet Length Mean', 'Bwd Packet Length Max', ' Label', ' Bwd Packet Length Min', ' Inbound', ' Bwd Packet Length Mean', ' Source Port', ' Flow Duration', 'Flow Bytes/s', ' Min Packet Length', ' RST Flag Count', ' Down/Up Ratio', ' min_seg_size_forward', ' CWE Flag Count', 'Unnamed: 0', ' ACK Flag Count'}
+
+SPLIT: 90/10
+Accuracy: 0.9996600225356491
+Class 0: Precision=0.9980680868838764, Recall=0.999424866673638, F1=0.9987460159882962
+Class 1: Precision=0.9503968253968254, Recall=0.9835728952772074, F1=0.9667003027245207
+Class 2: Precision=0.9999570446735395, Recall=0.9997262230047831, F1=0.9998416205173908
+Macro-average Precision=0.9828073189847469, Recall=0.9942413283185427, F1=0.9884293130767358, MCC=0.9980353260985019
+
+SPLIT: 80/20
+Accuracy: 0.9995288872267728
+Class 0: Precision=0.9976229658072774, Recall=0.9994504488001466, F1=0.9985358711566619
+Class 1: Precision=0.9471057884231537, Recall=0.9509018036072144, F1=0.9490000000000001
+Class 2: Precision=0.9998657739741105, Recall=0.9996671855708841, F1=0.9997664699108559
+Macro-average Precision=0.9815315094015138, Recall=0.983339812659415, F1=0.9824341136891727, MCC=0.9972758275555577
+
+SPLIT: 70/30
+Accuracy: 0.9996195477961294
+Class 0: Precision=0.99729284164859, Recall=0.9994782517956834, F1=0.9983843507869774
+Class 1: Precision=0.9545454545454546, Recall=0.9959919839679359, F1=0.9748283752860413
+Class 2: Precision=0.9999856758919891, Recall=0.9996438096260896, F1=0.9998147135354895
+Macro-average Precision=0.9839413240286778, Recall=0.9983713484632363, F1=0.9910091465361694, MCC=0.9978086087195169
+------------------------------------------------------------------------------------------------------------
+
+Features extracted from Heatmap with Covariance >= 0.01 or Covariance <= -0.01
+Feature-set size: 54
+Dataset: 54
+Common features: 54 {' Idle Max', ' Fwd Header Length.1', ' Max Packet Length', ' Fwd Packet Length Min', ' Fwd Packet Length Max', 'Fwd IAT Total', ' Packet Length Mean', ' Flow Packets/s', ' Bwd Packet Length Std', ' Flow IAT Std', ' Average Packet Size', 'Fwd Packets/s', ' Subflow Fwd Bytes', ' Idle Min', 'Init_Win_bytes_forward', ' Flow IAT Mean', ' Bwd IAT Min', 'Total Length of Fwd Packets', ' Flow IAT Max', ' Bwd IAT Max', ' Packet Length Std', ' Bwd IAT Mean', ' Packet Length Variance', 'Fwd PSH Flags', ' Protocol', ' Fwd Header Length', ' Avg Fwd Segment Size', ' Init_Win_bytes_backward', 'Active Mean', ' Avg Bwd Segment Size', ' Bwd IAT Std', ' URG Flag Count', ' Fwd Packet Length Std', ' Fwd Packet Length Mean', ' Fwd IAT Std', 'Bwd Packet Length Max', ' Label', ' Bwd Packet Length Min', 'Bwd IAT Total', ' Inbound', ' Bwd Packet Length Mean', ' Source Port', ' Flow Duration', ' Fwd IAT Mean', 'Idle Mean', 'Flow Bytes/s', ' Min Packet Length', ' RST Flag Count', ' Down/Up Ratio', ' min_seg_size_forward', ' Fwd IAT Max', ' CWE Flag Count', 'Unnamed: 0', ' ACK Flag Count', ' Active Max'}
+
+SPLIT: 90/10
+Accuracy: 0.9997134475657613
+Class 0: Precision=0.998016080192127, Recall=0.9994771515214891, F1=0.9987460815047021
+Class 1: Precision=0.9622266401590457, Recall=0.9938398357289527, F1=0.9777777777777777
+Class 2: Precision=0.9999892611107233, Recall=0.9997530638866671, F1=0.9998711485496159
+Macro-average Precision=0.986743993820632, Recall=0.997690017045703, F1=0.9921316692773653, MCC=0.9983442384049942
+
+SPLIT: 80/20
+Accuracy: 0.9997013047881085
+Class 0: Precision=0.9975714211103567, Recall=0.9996859707429409, F1=0.9986275765616217
+Class 1: Precision=0.9706744868035191, Recall=0.9949899799599199, F1=0.9826818406729343
+Class 2: Precision=1.0, Recall=0.9997154973428526, F1=0.9998577284331069
+Macro-average Precision=0.9894153026379585, Recall=0.9981304826819045, F1=0.993722381889221, MCC=0.9982742355760611
+
+SPLIT: 70/30
+Accuracy: 0.9997215413656777
+Class 0: Precision=0.9978299741332917, Recall=0.9996347762569784, F1=0.9987315598338865
+Class 1: Precision=0.9713541666666666, Recall=0.9966599866399466, F1=0.9838443785031322
+Class 2: Precision=0.9999946289211114, Recall=0.9997386743990406, F1=0.9998666352797123
+Macro-average Precision=0.9897262565736898, Recall=0.9986778124319885, F1=0.9941475245389103, MCC=0.9983952036299789
+------------------------------------------------------------------------------------------------------------
